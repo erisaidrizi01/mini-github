@@ -1,0 +1,23 @@
+.container{
+    margin-top: 3%;
+}
+
+.header{
+    border-bottom: 1px solid rgb(215, 210, 210);
+}
+
+.sec1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.owner{
+    margin-right: 30px;
+}
+
+.red{
+    color: rgb(177, 11, 11)
+}
+
+.alert{
+    width: 30%;
+}

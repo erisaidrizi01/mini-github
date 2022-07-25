@@ -1,0 +1,9 @@
+.path{
+    border-top: 1px solid #bbc1c7;
+    border-width: 100%;
+
+}
+
+.visit:hover{
+    text-decoration: underline;
+}

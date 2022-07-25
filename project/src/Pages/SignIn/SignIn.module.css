@@ -1,0 +1,24 @@
+.bcgImage{
+    background-image: url(../../Images/spaceship.jpg);
+    background-size: cover;
+    background-position: top;
+    min-height: 100%;
+    height: 100vh;
+    /* position: relative; */
+    text-align: center;
+}
+
+.card{
+    position:relative;
+    margin:auto;
+    width:30%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t{
+    position: absolute;
+    
+}

@@ -1,0 +1,18 @@
+.user{
+    border-bottom: 1px solid black;
+}
+
+.searchResults{
+    width: 100%;
+}
+
+.noresults{
+    color: #07587e;
+    padding:20px;
+    font-size: 20px;
+}
+
+.borderBottom{
+   border-bottom: 2px solid grey;
+    width: 100%;
+}

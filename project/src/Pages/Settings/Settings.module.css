@@ -1,0 +1,22 @@
+.settings {
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+
+.deletebtn{
+    border: 2px solid rgb(204, 201, 201) !important;
+    border-radius: 12px !important;
+    font-weight: bold !important;
+    color: red !important;
+    padding:10px !important;
+    font-size: 15px !important;
+ }
+
+ .deletebtn:hover{
+    background-color:red !important;
+    color: #fff !important;
+ }
+
+ .alert{
+    width: 35% !important;
+ }

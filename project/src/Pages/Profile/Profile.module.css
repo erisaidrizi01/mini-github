@@ -1,0 +1,34 @@
+
+.image{
+    width:250px;
+    height:250px;
+    /* border-radius: 100%; */
+    object-fit: cover;
+}
+
+.name{
+    /* padding:10px; */
+    font-size:20px;
+    /* margin-top: 15px; */
+    margin: 0.5rem;
+    letter-spacing: 1px;
+
+}
+
+.anchor{
+    text-decoration: none;
+    color: black;
+    font-size:18px;
+    cursor: none;
+    letter-spacing: 1px;
+}
+
+.anchor:hover{
+    cursor:pointer;
+    color:#0dcaf0;
+    padding: 2px solid black;
+}
+
+.textsize{
+    font-size: 18px;
+}

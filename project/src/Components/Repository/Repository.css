@@ -1,0 +1,23 @@
+.login{
+    color:#1672e5;
+    padding-left: 1rem!important;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+.name1{
+    color:#58b3f1;
+}
+
+.description{
+    font-size:12px;
+}
+
+.lastsec{
+    font-size:10px;
+}
+
+.mbottom{
+    margin-bottom: -1.5%;
+}

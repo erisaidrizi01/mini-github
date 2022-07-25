@@ -1,0 +1,9 @@
+.unfollowbtn{
+    border: 2px solid rgb(204, 201, 201) !important;
+    border-radius: 12px !important;
+    font-weight: bold;
+ }
+
+ .unfollowbtn:hover{
+    background-color:#e9ecef !important;
+ }

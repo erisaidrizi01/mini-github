@@ -1,0 +1,18 @@
+.searchResults{
+    width: 150px;
+    height: 50px;
+    right: 5%;
+    position: absolute;
+}
+
+.pos{
+    position:absolute;
+}
+
+.menudrop{
+    margin-right:30px !important;
+}
+
+.new{
+    background-color: black !important;
+}

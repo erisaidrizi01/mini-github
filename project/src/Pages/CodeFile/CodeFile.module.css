@@ -1,0 +1,17 @@
+.file{
+    border: 1px solid #beb9b9;
+    border-radius: 20px;
+   
+}
+
+.fileName{
+    padding-left: 30px;
+    padding-top:20px;
+    padding-bottom: 10px;
+border-bottom: 1px solid #beb9b9;
+
+}
+
+.code{
+    padding-left: 30px;
+}

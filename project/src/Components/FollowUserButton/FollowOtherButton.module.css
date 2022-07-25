@@ -1,0 +1,14 @@
+.unfollowbtn{
+    border: 2px solid rgb(204, 201, 201) !important;
+    border-radius: 12px !important;
+    font-weight: bolder;
+    padding: 0.25rem 4.5rem !important;
+    height: 2.5rem !important;
+    font-size: inherit !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.5px !important;
+ }
+
+ .unfollowbtn:hover{
+    background-color:#e9ecef !important;
+ }
