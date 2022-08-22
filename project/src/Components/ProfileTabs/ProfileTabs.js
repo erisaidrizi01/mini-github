@@ -11,19 +11,20 @@ import Following from "../../Pages/Profile/Following";
 export default function ProfileTabs(props) {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const searchVal = searchParams.get("tab");
+  const tab = searchParams.get("tab");
   const tabs = ["repositories", "starred", "followers", "following"];
   const [selectedTab, setSelectedTab] = useState(
-    tabs.includes(searchVal) ? searchVal : "repositories"
+    tabs.includes(tab) ? tab : "repositories"
   );
 
   useEffect(() => {
-    localStorage.setItem("selection", selectedTab);
-  }, [selectedTab]);
+    setSelectedTab(tabs.includes(tab) ? tab : "repositories");
+  }, [tab]);
 
   return (
     <div>
       <Tabs
+        activeKey={selectedTab}
         defaultActiveKey={selectedTab}
         id="uncontrolled-tab-example"
         className="mb-3"
@@ -74,17 +75,6 @@ export default function ProfileTabs(props) {
                 numberOfFollowing={props.numberOfFollowing}
               />
             )}
-            {/* {props.followingList &&
-              props.followingList.map((user) => (
-                <User
-                  key={user.id}
-                  user={user}
-                  handleFollowingUpdate={
-                    props.followingHasButton ? props.updateFollowing : null
-                  }
-                  hasButton={props.followingHasButton}
-                />
-              ))} */}
           </div>
         </Tab>
       </Tabs>

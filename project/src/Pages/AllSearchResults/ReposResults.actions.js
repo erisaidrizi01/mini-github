@@ -16,7 +16,7 @@ export const getData = async (
       )
       .then((response) => {
         const total = Math.ceil(response.data.total_count / 10);
-        console.log("totall", total);
+
         setTotalPages(total);
         setLoading(false);
         setReposResults(response.data.items);

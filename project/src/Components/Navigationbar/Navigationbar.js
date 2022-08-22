@@ -8,7 +8,7 @@ import {
 } from "react-bootstrap";
 import SearchResults from "../SearchResults/SearchResults";
 import { useDispatch } from "react-redux/es/exports";
-import { getSignOutData } from "../../Pages/SignIn/SignIn.actions";
+import { clearUserData } from "../../Pages/SignIn/SignIn.actions";
 import { useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { useSelector } from "react-redux/es/exports";
@@ -26,7 +26,7 @@ export default function Navigationbar() {
   const searchVal = searchParams.get("tab");
 
   const handleLogOut = () => {
-    dispatch(getSignOutData());
+    dispatch(clearUserData());
     navigate("/signin");
   };
   const userName = useSelector((state) => state.signin.data.login);

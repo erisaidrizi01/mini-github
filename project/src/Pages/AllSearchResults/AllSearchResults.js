@@ -15,17 +15,21 @@ export default function AllSearchResults() {
   const [searchType] = useSearchParams();
   const type = searchType.get("type");
   const types = ["users", "repositories"];
+
   const [selectedType, setSelectedType] = useState(
-    types.includes(type) ? type : "users"
+    types.includes(type) ? type : "repositories"
   );
 
   useEffect(() => {
     localStorage.setItem("type", selectedType);
-  }, [selectedType]);
+    // console.log("999", selectedType);
+    setSelectedType(types.includes(type) ? type : "repositories");
+  }, [selectedType, type]);
 
   return (
     <Container className={styles.searchResults} fluid>
       <Tab.Container
+        activeKey={selectedType}
         id="left-tabs-example"
         defaultActiveKey={selectedType}
         onSelect={(eventKey) => {

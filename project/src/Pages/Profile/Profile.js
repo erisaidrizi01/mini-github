@@ -7,10 +7,10 @@ import LoadingSpinner from "../../Components/LoadingSpinner/LoadingSpinner";
 import OtherUserProfile from "./OtherUserProfile";
 
 export default function Profile() {
-  console.log("Profile");
   const name = useParams();
 
   const [username, setUsername] = useState("");
+
   const myUsername = useSelector((state) => state.signin.data.login);
 
   useEffect(() => {

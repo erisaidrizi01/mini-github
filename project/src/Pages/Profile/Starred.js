@@ -68,6 +68,7 @@ export default function Starred(props) {
           )}
           <div className=" my-4">
             <PrevNext
+              page={page}
               selectPage={handlePageClick}
               hasNext={starredReposList.length < 30 ? false : true}
             />

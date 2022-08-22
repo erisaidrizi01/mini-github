@@ -8,7 +8,7 @@ export default function First() {
       <Container className={`${styles.bcgImage}`} fluid>
         <Row className={`${styles.pos}`}>
           <Col>
-            <h1 className="text-secondary">Welcome to MiniGit</h1>
+            <h1 className="text-secondary">Welcome to MiniGitHub</h1>
           </Col>
         </Row>
       </Container>

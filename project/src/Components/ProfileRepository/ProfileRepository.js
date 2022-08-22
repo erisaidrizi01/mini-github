@@ -12,14 +12,11 @@ export default function ProfileRepository(props) {
     stargazers_count,
   } = props.repository;
 
+  const { login } = props.repository.owner;
   return (
     <div>
       <div className="repo">
-        <div
-          onClick={() =>
-            navigate(`/${props.repository.owner.login}/repository/${name}`)
-          }
-        >
+        <div onClick={() => navigate(`/${login}/repository/${name}`)}>
           <div className="title">
             <i className="fa fa-shuttle-space pr-1 mx-1" />
             <span>{name}</span>

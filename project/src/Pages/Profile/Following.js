@@ -25,15 +25,15 @@ export default function Following(props) {
     if (profile && name) {
       if (profile.login === name.login) {
         if (profile.following_url) {
-          const words = profile.following_url.toString().split("{");
-          setFollowingUrl(words[0]);
+          const followingUrl = profile.following_url.toString().split("{");
+          setFollowingUrl(followingUrl[0]);
           const noFollowing = profile.following;
           setTotalPages(Math.ceil(noFollowing / 5));
         }
       } else {
         if (props.followingListUrl) {
-          const words = props.followingListUrl.toString().split("{");
-          setFollowingUrl(words[0]);
+          const followingUrl = props.followingListUrl.toString().split("{");
+          setFollowingUrl(followingUrl[0]);
           const noFollowing = props.numberOfFollowing;
           setTotalPages(Math.ceil(noFollowing / 5));
         }
@@ -52,17 +52,6 @@ export default function Following(props) {
       }
     }
   }, [following_url, page]);
-
-  // let pagination = "";
-
-  // useEffect(() => {
-
-  //   pagination = <Pages
-  //   page={page}
-  //   totalPages={totalPages}
-  //   selectPage={handlePageClick}
-  // />
-  // }, [])
 
   const updateFollowing = (userName) => {
     const updatedList = followingList.filter((word) => word.login !== userName);

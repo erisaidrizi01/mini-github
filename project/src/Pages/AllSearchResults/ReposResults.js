@@ -38,7 +38,7 @@ export default function ReposResults() {
 
   const handlePageClick = (nr) => {
     setPage(nr);
-    console.log("page nga onClick", page);
+    // console.log("page nga onClick", page);
   };
 
   return (

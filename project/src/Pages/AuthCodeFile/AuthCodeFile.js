@@ -17,8 +17,6 @@ export default function AuthCodeFile() {
     console.log(getCodeFile(user, repository, path, setCode, setIsLoading));
   });
 
-  console.log("code", code);
-
   const newCode = code
     .slice(1, -1)
     .split("\\n")

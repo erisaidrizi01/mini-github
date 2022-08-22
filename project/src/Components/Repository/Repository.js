@@ -16,7 +16,7 @@ export default function Repository(props) {
     topics,
     updated_at,
   } = props.repo;
-
+  const { login } = props.repo.owner;
   useEffect(() => {
     if (updated_at) {
       setDate(new Date(updated_at).toLocaleString());
@@ -32,11 +32,9 @@ export default function Repository(props) {
         <div className="d-flex mbottom">
           <p
             className="login"
-            onClick={() =>
-              navigate(`/${props.repo.owner.login}/repository/${name}`)
-            }
+            onClick={() => navigate(`/${login}/repository/${name}`)}
           >
-            {props.repo.owner.login} /<span className="name1">{name}</span>
+            {login} /<span className="name1">{name}</span>
           </p>
         </div>
         <div>

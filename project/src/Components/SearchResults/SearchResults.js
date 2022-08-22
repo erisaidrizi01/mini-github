@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 export default function SearchResults(props) {
   const userName = useSelector((state) => state.signin.data.login);
 
-  function useOutsideAlerter(ref) {
+  function useOutside(ref) {
     useEffect(() => {
       function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
@@ -33,10 +33,14 @@ export default function SearchResults(props) {
 
   const [isLoading, setIsLoading] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
+
   useEffect(() => {
     getUsers(props.input, setSearchResults, setIsLoading);
   }, [props.input]);
-  useOutsideAlerter(wrapperRef);
+
+  useOutside(wrapperRef);
+
+  const type = localStorage.getItem("type");
 
   return (
     <div
@@ -48,7 +52,11 @@ export default function SearchResults(props) {
           className={`${styles.parent}`}
           onClick={() => {
             props.setShow(false);
-            navigate(`/search?q=${props.input}&type=repositories`);
+            if (type) {
+              navigate(`/search?q=${props.input}&type=${type}`);
+            } else {
+              navigate(`/search?q=${props.input}&type=repositories`);
+            }
           }}
         >
           <div

@@ -80,11 +80,9 @@ export const updateFollowingData = (updatedFollowingList) => {
   };
 };
 
-export const getSignOutData = () => {
-  console.log("erdha");
+export const clearUserData = () => {
   return (dispatch) => {
     localStorage.clear();
-
     dispatch({
       type: actionTypes.USER_LOGOUT,
     });

@@ -1,6 +1,6 @@
 import axios from "axios";
 import store from "./Redux/store";
-import { getSignOutData } from "./Pages/SignIn/SignIn.actions";
+import { clearUserData } from "./Pages/SignIn/SignIn.actions";
 import { createBrowserHistory } from "history";
 export let history = createBrowserHistory();
 
@@ -30,7 +30,7 @@ axios.interceptors.response.use(
       error.response.statusText === "Unauthorized"
     ) {
       localStorage.clear();
-      dispatch(getSignOutData());
+      dispatch(clearUserData());
       history.push("/signin");
       console.log("3333");
     }
@@ -39,23 +39,3 @@ axios.interceptors.response.use(
     }
   }
 );
-
-//   axios.interceptors.response.use(
-//     (response) => response,
-//     (error) => {
-//       if (error.response.status === 401 || error.response.status === 403) {
-//         localStorage.clear();
-//         navigate("/signin");
-//       }
-//       return Promise.reject(error);
-//     }
-//   );
-// };
-
-// function AxiosInterceptorNavigate({ children }) {
-//   let navigate = useNavigate();
-//   AxiosInterceptorsSetup(navigate);
-//   return children;
-// }
-
-// export default AxiosInterceptorNavigate;

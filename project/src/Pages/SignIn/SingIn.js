@@ -4,7 +4,7 @@ import styles from "./SignIn.module.css";
 import { useState } from "react";
 import { getSignInData } from "./SignIn.actions";
 import { useDispatch } from "react-redux";
-// import { getSignOutData } from "./SignIn.actions";
+// import { clearUserData } from "./SignIn.actions";
 import { useSelector } from "react-redux/es/exports";
 
 export default function SignIn() {
@@ -13,9 +13,6 @@ export default function SignIn() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // if (!localStorage.getItem("token")) {
-  //   dispatch(getSignOutData);
-  // }
   const handleSignInClick = (e) => {
     e.preventDefault();
     try {
@@ -54,9 +51,6 @@ export default function SignIn() {
                 placeholder="Enter password"
                 onChange={(e) => {
                   setPassword(e.target.value);
-                  // if (password === "") {
-                  //   setError("");
-                  // }
                 }}
               />
               <span className="err ? error : null">{error}</span>

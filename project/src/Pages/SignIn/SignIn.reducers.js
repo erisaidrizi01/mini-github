@@ -5,8 +5,6 @@ export const signin = (
     loading: false,
     data: {},
     followingList: [],
-    repositoriesList: [],
-    starredReposList: [],
     error: null,
   },
   { type, payload }
@@ -29,16 +27,7 @@ export const signin = (
         loading: false,
         data: {},
         followingList: [],
-        repositoriesList: [],
-        starredReposList: [],
         error: payload,
-      };
-
-    case actionTypes.UPDATE_STARRED:
-      console.log("arrived starres", payload);
-      return {
-        ...state,
-        starredReposList: payload,
       };
 
     case actionTypes.UPDATE_FOLLOWING:
@@ -48,20 +37,11 @@ export const signin = (
         followingList: payload,
       };
 
-    case actionTypes.UPDATE_REPOSITORIES:
-      console.log("arrived at repositories", payload);
-      return {
-        ...state,
-        repositoriesList: [...state.repositoriesList, ...payload],
-      };
-
     case actionTypes.USER_LOGOUT:
       console.log("arrived at user_logout");
       return {
         data: {},
         followingList: [],
-        repositoriesList: [],
-        starredReposList: [],
         error: null,
       };
     default:

@@ -42,8 +42,8 @@ export default function RepositoryTree() {
       );
     }
   }, [defaultBranch]);
+
   const profileLogin = useSelector((state) => state.signin.data.login);
-  console.log("po provoj found", found);
 
   return (
     <div>

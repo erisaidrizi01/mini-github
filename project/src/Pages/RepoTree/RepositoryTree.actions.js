@@ -2,11 +2,9 @@ import axios from "axios";
 import { urls } from "../../Config";
 
 export const findRepo = async (login, name, setIsLoading, setFound) => {
-  console.log("ckemi");
   setIsLoading(true);
   try {
     await axios.get(`${urls.repos}/${login}/${name}`).then((response) => {
-      console.log("a vij ktu?");
       if (response !== undefined) {
         setFound("found");
       }
@@ -54,7 +52,6 @@ export const getAuthRepoTree = async (
       .then((response) => {
         setIsLoading(false);
         setRepoTree(response.data.tree);
-        console.log("si eshte response", response);
       });
   } catch (err) {
     setError(err.message);

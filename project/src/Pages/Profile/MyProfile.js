@@ -8,7 +8,6 @@ import ProfileTabs from "../../Components/ProfileTabs/ProfileTabs";
 import { useState } from "react";
 
 export default function MyProfile() {
-  console.log("My profile");
   const profile = useSelector((state) => state.signin.data);
   const loading = useSelector((state) => state.signin.loading);
 
@@ -48,14 +47,11 @@ export default function MyProfile() {
           <Col xs={6}>
             <ProfileTabs
               login={profile.login}
+              numberOfRepos={numberOfRepos}
               numberOfFollowers={profile.followers}
               numberOfFollowing={numberOfFollowing}
-              // followingList={following}
-              // followersList={followersList}
-              // updateFollowing={updateFollowing}
               followingHasButton={true}
               followerHasButton={false}
-              numberOfRepos={numberOfRepos}
             />
           </Col>
         </Row>

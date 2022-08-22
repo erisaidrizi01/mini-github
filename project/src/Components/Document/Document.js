@@ -4,16 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 export const Document = (props) => {
   const { path, mode } = props.document;
-  console.log("path", path);
-  // console.log("mode", mode);
 
   const user = props.user;
   const repository = props.repository;
   const name = props.document.name;
   const type = props.document.type;
-  console.log("type", type, "name", name);
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
+  console.log("heyoo", name, path);
   return (
     <div className={`${styles.path} py-2`}>
       <span className="px-2">
@@ -44,9 +42,9 @@ export const Document = (props) => {
                 );
           }
           if (mode === "040000" || type === "dir") {
-            props.defaultBranch === "main"
-              ? navigate(`/${user}/repository/${repository}/${path}`)
-              : navigate(`/${user}/repository/${repository}/${path}`);
+            // props.defaultBranch === "main"
+            // ? navigate(`/${user}/repository/${repository}/${path}`) :
+            navigate(`/${user}/repository/${repository}/${path}`);
           }
         }}
       >
@@ -55,9 +53,3 @@ export const Document = (props) => {
     </div>
   );
 };
-
-// onClick={() =>
-//   props.defaultBranch === "main"
-//     ? navigate(`/${user}/${repository}/tree/main/${path}`)
-//     : navigate(`/${user}/${repository}/tree/master/${path}`)
-// }

@@ -13,8 +13,7 @@ export default function FolderFiles() {
   const [isLoading, setIsLoading] = useState(false);
 
   const { name, repository, user, path } = useParams();
-  console.log("path", path);
-  console.log("nameee", user);
+
   useEffect(() => {
     if (folderTree !== [])
       getFolderTree(user, repository, path, setFolderTree, setIsLoading);

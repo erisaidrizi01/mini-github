@@ -1,7 +1,6 @@
 import React from "react";
 import { Pagination } from "react-bootstrap";
 import { useState } from "react";
-import { useEffect } from "react";
 
 export default function Pages(props) {
   const pageLimit = 10;
@@ -16,6 +15,7 @@ export default function Pages(props) {
   function goToNextPage() {
     props.selectPage(currentPage + 1);
     setCurrentPage((page) => page + 1);
+    setCurrentPage(10);
   }
 
   function goToPreviousPage() {
@@ -66,7 +66,6 @@ export default function Pages(props) {
           ) : null
         )}
 
-        {/* next button */}
         <Pagination.Next
           onClick={goToNextPage}
           className={`next ${

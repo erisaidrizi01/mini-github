@@ -2,8 +2,9 @@ import React from "react";
 import { Pagination } from "react-bootstrap";
 import { useState } from "react";
 import styles from "./Pagination.module.css";
+
 export default function PrevNext(props) {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(props.page);
 
   function goToNextPage() {
     props.selectPage(currentPage + 1);

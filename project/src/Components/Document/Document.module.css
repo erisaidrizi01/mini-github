@@ -7,3 +7,7 @@
 .visit:hover{
     text-decoration: underline;
 }
+
+.typeFolder{
+    color: "#54aeff" !important;
+}

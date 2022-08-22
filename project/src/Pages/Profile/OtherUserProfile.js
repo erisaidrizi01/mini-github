@@ -53,8 +53,8 @@ export default function OtherUserProfile() {
   useEffect(() => {
     if (user) {
       if (repos_url) {
-        const words = following_url.toString().split("{");
-        setFollowingUrl(words[0]);
+        const followingUrl = following_url.toString().split("{");
+        setFollowingUrl(followingUrl[0]);
         const starred = starred_url.toString().split("{");
         setReposUrl(repos_url);
         setStarredUrl(starred[0]);
