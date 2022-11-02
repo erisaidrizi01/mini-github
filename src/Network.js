@@ -32,7 +32,6 @@ axios.interceptors.response.use(
       localStorage.clear();
       dispatch(clearUserData());
       history.push("/signin");
-      console.log("3333");
     }
     if (error.response.status === 404) {
       history.push("/*");
